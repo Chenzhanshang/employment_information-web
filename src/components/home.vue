@@ -29,7 +29,9 @@
       </el-menu>
     </el-header>
     <el-main>
-      <router-view></router-view>
+      <router-view>
+      </router-view>
+     
     </el-main>
 
   </el-container>
@@ -43,6 +45,7 @@
   export default {
     data() {
       return {
+
         feedback:false,
         activeIndex: '1',
         user:'',

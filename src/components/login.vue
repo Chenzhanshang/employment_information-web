@@ -1,9 +1,13 @@
-<template>
+<template >
     <el-container>
+    <div class="background">
+        <img :src="imgSrc" width="100%" height="100%" />
+    </div>
         <el-header>
  
         </el-header>
-        <el-main class="main">
+        <el-main class="main" >
+            
             <el-dialog
             title="请填写注册信息"
             :visible.sync="dialogVisible"
@@ -98,6 +102,8 @@ export default {
         return {
             dialogVisible:false,
             findDialogVisible:false,
+            //背景图
+            imgSrc:require('./login.png'),
             //是否找到账号
             findFlag:false,
             form: {
@@ -266,6 +272,13 @@ export default {
   .main{
       margin-top: calc(15vh)
   }
+
+  .background{
+    width:100%;  
+    height:100%;  /**宽高100%是为了图片铺满屏幕 */
+    z-index:-1;
+    position: absolute;
+    }
 
 
 </style>
